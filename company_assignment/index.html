@@ -1,0 +1,87 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tasks</h1>
+            <div class="header-actions">
+                <button id="newTaskBtn" class="btn">NewTask</button>
+                <button class="btn">Refresh</button>
+                <input type="text" id="search" placeholder="Search tasks...">
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>Assigned To</th>
+                    <th>Status</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Comments</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+                <!-- Tasks will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <footer>
+            <div class="pagination">
+                <button>&laquo; First</button>
+                <button>&lsaquo; Prev</button>
+                <span>1</span>
+                <button>Next &rsaquo;</button>
+                <button>Last &raquo;</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Task Form Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h2>Add/Edit Task</h2>
+            <label for="assignedTo">Assigned To:</label>
+            <input type="text" id="assignedTo" placeholder="User Name" />
+            <label for="status">Status:</label>
+<select id="status">
+    <option value="Not Started">Not Started</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Completed">Completed</option>
+</select>
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" />
+            <label for="priority">Priority:</label>
+<select id="priority">
+    <option value="Low">Low</option>
+    <option value="Normal">Normal</option>
+    <option value="High">High</option>
+</select>
+
+            <label for="comments">Description:</label>
+            <input type="text" id="comments" placeholder="Comments" />
+            <button id="saveTaskBtn">Save Task</button>
+            <button id="cancelTaskBtn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
